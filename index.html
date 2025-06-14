@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Michael McGahan - Technical Consultant III with expertise in Windows Server administration, PowerShell scripting, and enterprise solutions. Based in Kansas City, Kansas.">
+    <meta name="keywords" content="Michael McGahan, Technical Consultant, System Engineer, IT Professional, PowerShell, Windows Server, WellSky, Cerner, Kansas City">
+    <meta name="author" content="Michael McGahan">
+    <title>Michael McGahan - IT Professional | Technical Consultant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #475569;
+            --accent-color: #3b82f6;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--primary-color);
+            background-color: #ffffff;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 60px 0 40px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.025em;
+        }
+
+        .tagline {
+            font-size: 1.125rem;
+            color: var(--secondary-color);
+            margin-bottom: 24px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--primary-color);
+            letter-spacing: -0.025em;
+        }
+
+        h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--primary-color);
+        }
+
+        .date {
+            color: var(--text-light);
+            font-size: 0.875rem;
+            margin-bottom: 16px;
+        }
+
+        .company {
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        /* Summary Section */
+        .summary {
+            font-size: 1.0625rem;
+            line-height: 1.8;
+            color: var(--secondary-color);
+            margin-bottom: 60px;
+        }
+
+        /* Experience & Education Items */
+        .experience-item, .education-item {
+            margin-bottom: 40px;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 12px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            color: var(--secondary-color);
+            font-size: 0.9375rem;
+            line-height: 1.7;
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+        }
+
+        .skill-category h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background-color: var(--bg-light);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            color: var(--secondary-color);
+            border: 1px solid var(--border-color);
+            transition: all 0.2s;
+        }
+
+        .skill-tag:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        /* Skills Section - Tech Stack Style */
+        .tech-stack {
+            display: grid;
+            gap: 20px;
+        }
+
+        .stack-item {
+            padding: 24px;
+            border-radius: 12px;
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .stack-item:hover {
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+        }
+
+        .stack-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .stack-icon {
+            width: 48px;
+            height: 48px;
+            background-color: var(--accent-color);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: white;
+        }
+
+        .stack-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .stack-title {
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: var(--primary-color);
+            margin-bottom: 4px;
+        }
+
+        .stack-description {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .stack-tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tool-tag {
+            background-color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8125rem;
+            color: var(--secondary-color);
+            border: 1px solid var(--border-color);
+            transition: all 0.2s;
+        }
+
+        .tool-tag:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            transform: translateY(-1px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding-top: 60px;
+            margin-top: 80px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+
+        /* Icon styles */
+        .icon {
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            header {
+                padding: 40px 0 30px 0;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            section {
+                margin-bottom: 40px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                font-size: 11pt;
+            }
+
+            .container {
+                max-width: 100%;
+            }
+
+            header {
+                padding: 20px 0;
+            }
+
+            section {
+                margin-bottom: 30px;
+            }
+
+            .skill-tag {
+                border: 1px solid #333;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Michael McGahan</h1>
+            <p class="tagline">IT Professional | Technical Consultant | System Engineer</p>
+            <div class="contact-info">
+                <a href="mailto:michael.mcgahan@gmail.com">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    michael.mcgahan@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/mmcgahan" target="_blank">
+                    <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="https://michaelmcgahan.com">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    Kansas City, Kansas
+                </a>
+            </div>
+        </header>
+
+        <section class="summary">
+            <h2>Professional Summary</h2>
+            <p>
+                Highly skilled IT professional with extensive experience in implementing, maintaining, and optimizing enterprise solutions across diverse technology environments. Proven ability to lead technical projects, develop automation scripts, and enhance system performance to drive organizational efficiency and client satisfaction. Expertise includes Windows Server administration, PowerShell scripting, web application development, virtualization, and cloud-based technologies. Adept at collaborating with cross-functional teams, mentoring peers, and aligning solutions with business objectives. Known for delivering innovative solutions, maintaining high standards of quality, and consistently exceeding expectations in dynamic, fast-paced environments.
+            </p>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <h3>Technical Consultant III <span class="company">@ WellSky Corporation</span></h3>
+                <p class="date">November 2019 - Present | Overland Park, Kansas</p>
+                <ul>
+                    <li>Spearheaded the deployment of WellSky software in diverse environments (hosted and on-premise), ensuring seamless integration across 30+ successful projects</li>
+                    <li>Directed technical calls to coordinate implementation milestones, resolve client queries, and maintain a 95% client satisfaction rate through proactive issue resolution</li>
+                    <li>Facilitated cross-functional collaboration between clients and internal teams, ensuring issue resolution within SLA timelines, resulting in consistent project success</li>
+                    <li>Engineered and maintained PowerShell automation scripts to streamline repetitive deployment tasks, reducing implementation times by 40%</li>
+                    <li>Trained and mentored 10+ technical consultants, improving onboarding efficiency and ensuring consistent delivery of technical solutions</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Sr. System Engineer <span class="company">@ Cerner Corporation</span></h3>
+                <p class="date">2014 - 2019 | Kansas City, Kansas</p>
+                <ul>
+                    <li>Installed and maintained multi-platform solutions (Windows Server, Oracle/Red Hat Linux, MySQL, IBM WebSphere, Apache, IIS), ensuring consistent performance across diverse environments</li>
+                    <li>Managed a fleet of 400+ Windows Servers (2008R2–2019) using proactive monitoring tools, achieving 99.9% system uptime through preemptive maintenance and issue resolution</li>
+                    <li>Diagnosed and resolved performance bottlenecks in software and hardware using log analysis and system diagnostics, cutting recurring incidents by 20%</li>
+                    <li>Designed, deployed, and maintained virtualized environments with Citrix and VMware</li>
+                    <li>Developed and optimized PowerShell scripts to automate repetitive administrative tasks</li>
+                    <li>Provided SME-level expertise on Cerner products (CareAware iBus, CareAware Mobile) and integrated third-party solutions, delivering tailored implementations for 20+ healthcare clients</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Web Developer <span class="company">@ Georgia Southern University</span></h3>
+                <p class="date">2011 - 2013 | Statesboro, Georgia</p>
+                <ul>
+                    <li>Managed and enhanced the myGSU student portal, ensuring uptime and functionality by developing new features with HTML, CSS, and JavaScript, improving user experience for 20,000+ students</li>
+                    <li>Led the redesign of the myGSU portal interface using industry-standard tools, aligning with university branding and marketing standards, and increasing user engagement by 20%</li>
+                    <li>Participated in strategic decisions on web frameworks, leading the migration to a scalable platform that improved system performance and user satisfaction</li>
+                    <li>Collaborated with university departments to enhance their web presence through tailored solutions, fostering cross-functional communication and elevating the university's digital profile</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <h3>B.S. Information Technology</h3>
+                <p class="company">Georgia Southern University</p>
+                <p class="date">2009 - 2013 | Statesboro, Georgia</p>
+                <ul>
+                    <li>Emphasis in Network Administration</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="tech-stack">
+                <div class="stack-item">
+                    <div class="stack-header">
+                        <div class="stack-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="stack-title">Infrastructure & Systems</div>
+                            <div class="stack-description">10+ years managing enterprise infrastructure at scale</div>
+                        </div>
+                    </div>
+                    <div class="stack-tools">
+                        <span class="tool-tag">Windows Server 2012-2019</span>
+                        <span class="tool-tag">Red Hat Enterprise Linux</span>
+                        <span class="tool-tag">PowerShell</span>
+                        <span class="tool-tag">Active Directory</span>
+                        <span class="tool-tag">DNS/DHCP</span>
+                        <span class="tool-tag">HAProxy</span>
+                        <span class="tool-tag">SSL/TLS</span>
+                        <span class="tool-tag">Load Balancing</span>
+                        <span class="tool-tag">Apache</span>
+                        <span class="tool-tag">IIS</span>
+                    </div>
+                </div>
+
+                <div class="stack-item">
+                    <div class="stack-header">
+                        <div class="stack-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="stack-title">Automation & DevOps</div>
+                            <div class="stack-description">Streamlining operations and reducing deployment times by 40%</div>
+                        </div>
+                    </div>
+                    <div class="stack-tools">
+                        <span class="tool-tag">PowerShell Scripting</span>
+                        <span class="tool-tag">Ansible</span>
+                        <span class="tool-tag">Terraform</span>
+                        <span class="tool-tag">Docker</span>
+                        <span class="tool-tag">Git</span>
+                        <span class="tool-tag">CI/CD</span>
+                        <span class="tool-tag">Infrastructure as Code</span>
+                        <span class="tool-tag">Bash</span>
+                    </div>
+                </div>
+
+                <div class="stack-item">
+                    <div class="stack-header">
+                        <div class="stack-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="stack-title">Virtualization & Cloud</div>
+                            <div class="stack-description">Designing and maintaining virtualized environments</div>
+                        </div>
+                    </div>
+                    <div class="stack-tools">
+                        <span class="tool-tag">VMware vSphere</span>
+                        <span class="tool-tag">Citrix XenApp</span>
+                        <span class="tool-tag">Proxmox</span>
+                        <span class="tool-tag">Hyper-V</span>
+                        <span class="tool-tag">Container Orchestration</span>
+                        <span class="tool-tag">Virtual Networking</span>
+                    </div>
+                </div>
+
+                <div class="stack-item">
+                    <div class="stack-header">
+                        <div class="stack-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="stack-title">Data Management & Applications</div>
+                            <div class="stack-description">Database administration and web application development</div>
+                        </div>
+                    </div>
+                    <div class="stack-tools">
+                        <span class="tool-tag">SQL Server</span>
+                        <span class="tool-tag">MySQL</span>
+                        <span class="tool-tag">Oracle DBMS</span>
+                        <span class="tool-tag">T-SQL</span>
+                        <span class="tool-tag">Database Optimization</span>
+                        <span class="tool-tag">HTML/CSS</span>
+                        <span class="tool-tag">JavaScript</span>
+                        <span class="tool-tag">JSON</span>
+                        <span class="tool-tag">REST APIs</span>
+                    </div>
+                </div>
+
+                <div class="stack-item">
+                    <div class="stack-header">
+                        <div class="stack-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="stack-title">Security & Monitoring</div>
+                            <div class="stack-description">Maintaining 99.9% uptime through proactive monitoring</div>
+                        </div>
+                    </div>
+                    <div class="stack-tools">
+                        <span class="tool-tag">System Monitoring</span>
+                        <span class="tool-tag">Log Analysis</span>
+                        <span class="tool-tag">Performance Tuning</span>
+                        <span class="tool-tag">SSL/TLS Certificates</span>
+                        <span class="tool-tag">Security Best Practices</span>
+                        <span class="tool-tag">Incident Response</span>
+                        <span class="tool-tag">SLA Management</span>
+                    </div>
+                </div>
+
+                <div class="stack-item">
+                    <div class="stack-header">
+                        <div class="stack-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="stack-title">Healthcare IT & Enterprise Solutions</div>
+                            <div class="stack-description">Specialized expertise in healthcare technology implementations</div>
+                        </div>
+                    </div>
+                    <div class="stack-tools">
+                        <span class="tool-tag">Cerner Millennium</span>
+                        <span class="tool-tag">CareAware iBus</span>
+                        <span class="tool-tag">WellSky Software</span>
+                        <span class="tool-tag">HL7 Integration</span>
+                        <span class="tool-tag">HIPAA Compliance</span>
+                        <span class="tool-tag">Enterprise Deployments</span>
+                        <span class="tool-tag">IBM WebSphere</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Michael McGahan. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
